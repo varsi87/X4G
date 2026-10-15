@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>پنل 🎮 گیمینگ (۵۰۰ گیگ) | PUBGメAZVIX</title>
+<title>پنل 🇩🇪 آلمان (100 گیگ) | PUBGメAZVIX</title>
 <style>
 :root{--accent:#14b8a6;--accent2:#f97316;--card:rgba(12,18,34,0.95);--text:#e2e8f0;--muted:#94a3b8;--border:#14b8a655}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -37,7 +37,7 @@ textarea{min-height:70px;font-family:monospace;font-size:0.75rem;direction:ltr;t
 .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(80px);background:#0a1220;border:1px solid var(--accent);padding:12px 18px;border-radius:12px;z-index:99;opacity:0;transition:0.3s;font-weight:600;max-width:90%;text-align:center}
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
 .quota{height:8px;border-radius:999px;background:#0f172a;overflow:hidden;margin-top:6px;border:1px solid rgba(255,255,255,0.08)}
-.quota>div{height:100%^^;border-radius:999px}
+.quota>div{height:100%;border-radius:999px}
 .owner{color:#a78bfa;font-size:0.85rem;font-weight:700}
 .note{font-size:0.78rem;color:var(--muted);margin-top:10px;padding:10px;background:rgba(245,158,11,0.1);border-radius:8px;border-right:3px solid #f59e0b}
 </style>
@@ -45,8 +45,8 @@ textarea{min-height:70px;font-family:monospace;font-size:0.75rem;direction:ltr;t
 <body>
 <div class="wrap">
   <header>
-    <h1>🛡️ پنل گیمینگ (۵۰۰ گیگ)</h1>
-    <p style="color:var(--muted);margin-top:6px;font-size:0.9rem">پنل مستقل PUBGメAZVIX | ظرفیت ۵۰۰ گیگابایت</p>
+    <h1>🛡️ پنل 🇩🇪 آلمان (100 گیگ)</h1>
+    <p style="color:var(--muted);margin-top:6px;font-size:0.9rem">پنل تخصصی PUBGメAZVIX | ظرفیت ۱۰۰ گیگابایت</p>
     <span class="badge">مالک PUBGメAZVIX</span>
   </header>
 
@@ -59,7 +59,7 @@ textarea{min-height:70px;font-family:monospace;font-size:0.75rem;direction:ltr;t
 
   <div id="tab-dash" class="tab active">
     <div class="card">
-      <h2>📊 داشبورد این پنل</h2>
+      <h2>📊 داشبورد و وضعیت حجم</h2>
       <div class="meta" id="statusMeta">...</div>
       <div class="quota"><div id="quotaFill" style="width:0%"></div></div>
       <div id="dashList" style="margin-top:12px"></div>
@@ -68,14 +68,14 @@ textarea{min-height:70px;font-family:monospace;font-size:0.75rem;direction:ltr;t
 
   <div id="tab-create" class="tab">
     <div class="card">
-      <h2>➕ ساخت کانفیگ پابجی</h2>
+      <h2>➕ ساخت کانفیگ جدید (100 گیگ)</h2>
       <div class="row">
         <div><label>روز اعتبار</label><input type="number" id="cfgDays" min="1" max="365" value="30"/></div>
         <div><label>کاربر</label><input type="number" id="cfgUsers" min="1" max="50" value="1"/></div>
-        <div><label>حجم (گیگ)</label><input type="number" id="cfgGB" min="1" max="500" value="50"/></div>
+        <div><label>حجم (گیگ)</label><input type="number" id="cfgGB" min="1" max="100" value="100"/></div>
       </div>
-      <label>نام (اختیاری)</label>
-      <input type="text" id="cfgName" placeholder="پابجی ۵۰۰ گیگ"/>
+      <label>نام کانفیگ</label>
+      <input type="text" id="cfgName" placeholder="Ahmad_100GB"/>
       <div style="margin-top:12px"><button type="button" class="btn btn-p" id="btnCreate">✨ ساخت + دانلود</button></div>
     </div>
   </div>
@@ -100,7 +100,7 @@ textarea{min-height:70px;font-family:monospace;font-size:0.75rem;direction:ltr;t
         <button type="button" class="btn btn-o" id="btnOpenSub">🌐 باز کردن صفحه ساب</button>
         <button type="button" class="btn btn-o" id="btnCopyB64">📋 کپی Base64</button>
       </div>
-      <div class="note">بعد از هر تغییر وضعیت یا مصرف، دوباره لینک بسازید تا صفحه ساب به‌روز باشد. مالک PUBGメAZVIX</div>
+      <div class="note">پس از اتمام ۱۰۰ گیگابایت، حجم پنل تکمیل شده و کانفیگ متوقف می‌شود. مالک PUBGメAZVIX</div>
       <div id="subCfgList" style="margin-top:14px"></div>
     </div>
   </div>
@@ -109,11 +109,11 @@ textarea{min-height:70px;font-family:monospace;font-size:0.75rem;direction:ltr;t
 
 <script>
 (function(){
-  var PANEL = {totalGB:500, countryName:"سرور گیمینگ ۵۰۰ گیگ", flag:"🎮", endpoint:"sevira.helpower.ir:51821"};
-  var FIXED_PRIV = "qHhLY9vsgaPmwFYYX3ndYzYLOlYibdEmzBlh0rdKw24=";
-  var FIXED_IP = "10.0.3.37";
-  var SERVER_PUB = "Hbv15xWQ43aNkD2DEbvm/P9u2gb4tQ8sbJrxfwCNkAM=";
-  var STORAGE_KEY = "wg_wireguard_fixed_azvix_500gb_v1";
+  var PANEL = {totalGB: 100, countryName: "آلمان (۱۰۰ گیگ)", flag: "🇩🇪", endpoint: "de2.stonecoldstunner.ir:8445"};
+  var FIXED_PRIV = "0GcromJ7rF70ZnbyV8D+tShvBA7SKsbGzPSDiWNsvFc=";
+  var FIXED_IP = "10.8.10.95";
+  var SERVER_PUB = "hw8izxup9rk6FzWrWeCQxj+wNmSszp1JH3XmK87auVk=";
+  var STORAGE_KEY = "wg_wireguard_de2_100gb_v1";
   var CONFIGS = [];
   var CONSUMED = 0;
   var LAST_SUB_URL = "";
@@ -176,6 +176,7 @@ textarea{min-height:70px;font-family:monospace;font-size:0.75rem;direction:ltr;t
   function isActive(cfg) {
     if (!cfg || cfg.inSub === false) return false;
     if (remainingDays(cfg) <= 0) return false;
+    if (Number(CONSUMED) >= PANEL.totalGB) return false;
     return Math.max(0, (Number(cfg.gb)||0) - (Number(cfg.usedGB)||0)) > 0;
   }
 
@@ -183,7 +184,7 @@ textarea{min-height:70px;font-family:monospace;font-size:0.75rem;direction:ltr;t
     var safe = String(name).replace(/[^\x20-\x7E]/g,"_").slice(0,40);
     return {
       conf: [
-        "# Gaming WireGuard | Owner: PUBGメAZVIX",
+        "# AnJfHCw3NIVxZ5 | 100GB Gaming & Web",
         "# Name: " + safe,
         "# Volume: " + gb + "GB",
         "# Time: " + days + " days",
@@ -191,14 +192,14 @@ textarea{min-height:70px;font-family:monospace;font-size:0.75rem;direction:ltr;t
         "[Interface]",
         "PrivateKey = " + FIXED_PRIV,
         "Address = " + FIXED_IP + "/32",
-        "DNS = 8.8.8.8, 1.1.1.1",
+        "DNS = 1.1.1.1",
         "MTU = 1280",
         "",
         "[Peer]",
         "PublicKey = " + SERVER_PUB,
         "Endpoint = " + PANEL.endpoint,
-        "AllowedIPs = 0.0.0.0/0, ::/0",
-        "PersistentKeepalive = 15",
+        "AllowedIPs = 0.0.0.0/0",
+        "PersistentKeepalive = 25",
         ""
       ].join("\n")
     };
@@ -222,18 +223,32 @@ textarea{min-height:70px;font-family:monospace;font-size:0.75rem;direction:ltr;t
   }
 
   function updateStatus() {
-    var total = Number(PANEL.totalGB)||500;
-    var used = Math.max(0, Number(CONSUMED)||0);
+    var total = PANEL.totalGB;
+    var used = Math.min(total, Math.max(0, Number(CONSUMED)||0));
     var rem = Math.max(0, total - used);
     var act = CONFIGS.filter(isActive).length;
+    var statusText = used >= total ? "<span style='color:#ef4444'>⛔ حجم ۱۰۰ گیگ پنل تمام شده</span>" : "<span style='color:#86efac'>🇩🇪 آلمان (فعال)</span>";
+    
     document.getElementById("statusMeta").innerHTML =
-      "ظرفیت کل پنل: <strong>"+total+" گیگابایت</strong><br>"+
-      "حجم مصرفی: <strong style='color:#86efac'>"+used+"</strong> / "+total+" GB (باقی‌مانده: "+rem+" GB)<br>"+
-      "کانفیگ فعال: <strong>"+act+"</strong> / "+CONFIGS.length+"<br><span class='owner'>مالک PUBGメAZVIX</span>";
+      "وضعیت پنل: " + statusText + "<br>"+
+      "حجم مصرفی: <strong style='color:"+(used>=total?"#ef4444":"#86efac")+"'>" + used + "</strong> / " + total + " GB (باقی‌مانده: " + rem + " GB)<br>"+
+      "کانفیگ فعال: <strong>" + act + "</strong> / " + CONFIGS.length + "<br><span class='owner'>مالک PUBGメAZVIX</span>";
+    
     var pct = Math.min(100, Math.round((used/total)*100));
     var fill = document.getElementById("quotaFill");
-    fill.style.width = pct+"%";
-    fill.style.background = "#14b8a6";
+    fill.style.width = pct + "%";
+    fill.style.background = used >= total ? "#ef4444" : "#14b8a6";
+    
+    var btn = document.getElementById("btnCreate");
+    if (btn) {
+      if (used >= total) {
+        btn.disabled = true;
+        btn.textContent = "⛔ حجم پنل تمام شده";
+      } else {
+        btn.disabled = false;
+        btn.textContent = "✨ ساخت + دانلود";
+      }
+    }
   }
 
   function cfgButtons(cfg, i, on) {
@@ -254,7 +269,7 @@ textarea{min-height:70px;font-family:monospace;font-size:0.75rem;direction:ltr;t
     CONFIGS.forEach(function(cfg, i) {
       var on = isActive(cfg);
       var left = remainingDays(cfg);
-      var st = on ? "فعال" : (cfg.inSub===false?"غیرفعال":(left<=0?"منقضی":"حجم تمام"));
+      var st = on ? "فعال" : (Number(CONSUMED)>=PANEL.totalGB ? "حجم کل پنل تمام" : (cfg.inSub===false?"غیرفعال":(left<=0?"منقضی":"حجم تمام")));
       html += '<div class="cfg" style="opacity:'+(on?1:0.55)+'"><strong>🎮 '+(cfg.name||("#"+(i+1)))+'</strong> <span style="font-size:0.75rem;color:'+(on?"#86efac":"#fca5a5")+'">● '+st+'</span><br>'+
         '<span style="font-size:0.82rem;color:var(--muted)">'+(cfg.days||0)+' روز • باقی: '+left+' • '+(cfg.gb||0)+' گیگ</span>'+cfgButtons(cfg,i,on)+'</div>';
     });
@@ -294,7 +309,7 @@ textarea{min-height:70px;font-family:monospace;font-size:0.75rem;direction:ltr;t
 
   function buildSubPageHtml(cfg) {
     var on = isActive(cfg);
-    var nameStr = String(cfg.name || "گیمینگ");
+    var nameStr = String(cfg.name || "گیم و وب");
     var totalGB = Number(cfg.gb)||0;
     var confData = on ? (cfg.confText || "") : "";
     var qrUrl = "https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=8&data=" + encodeURIComponent(confData ? confData.slice(0,1200) : "INACTIVE");
@@ -307,16 +322,16 @@ textarea{min-height:70px;font-family:monospace;font-size:0.75rem;direction:ltr;t
       '.btn{display:block;width:100%;padding:14px;border:none;border-radius:28px;background:linear-gradient(135deg,#a855f7,#7c3aed);color:#fff;font-weight:800;cursor:pointer;margin:12px 0;font-family:inherit}'+
       '.qr{background:#fff;border-radius:16px;padding:16px;text-align:center;margin:12px 0}.conf{background:rgba(15,8,30,.95);border-radius:12px;padding:12px;font-family:monospace;font-size:11px;direction:ltr;text-align:left;max-height:260px;overflow:auto;color:#d8b4fe;white-space:pre-wrap;word-break:break-all}'+
       '.owner{text-align:center;color:#c084fc;font-weight:700;margin:8px 0}</style></head><body><div class="page">'+
-      '<h2 style="text-align:center;color:#c084fc">📋 اطلاعات کانفیگ پابجی</h2><p class="owner">مالک PUBGメAZVIX</p>'+
+      '<h2 style="text-align:center;color:#c084fc">📋 اطلاعات کانفیگ آلمان</h2><p class="owner">مالک PUBGメAZVIX</p>'+
       '<div class="card">'+
       '<div class="row"><span class="lbl">نام</span><span class="val">'+nameStr.replace(/</g,"")+'</span></div>'+
       '<div class="row"><span class="lbl">حجم</span><span class="val">'+totalGB+' GB</span></div>'+
-      '<div class="row"><span class="lbl">لوکیشن</span><span class="val">🎮 پنل ۵۰۰ گیگ (گیم)</span></div>'+
+      '<div class="row"><span class="lbl">لوکیشن</span><span class="val">🇩🇪 آلمان (100 گیگ)</span></div>'+
       '<div class="row"><span class="lbl">وضعیت</span><span class="val"><span class="pill '+(on?"ok":"off")+'">'+(on?"فعال":"غیرفعال")+'</span></span></div></div>'+
       '<div class="conf">'+(confData||"⛔ کانفیگ غیرفعال").replace(/</g,"&lt;")+'</div>'+
       (on?'<button class="btn" onclick="var c='+JSON.stringify(confData)+';var a=document.createElement(\'a\');a.href=URL.createObjectURL(new Blob([c]));a.download=\'config.conf\';a.click()">⬇️ دانلود</button>':'<button class="btn" disabled>⛔ غیرفعال</button>')+
       '<div class="qr">'+(on?'<img src="'+qrUrl+'" width="220" height="220"/>':'<div style="padding:80px;color:#a78bfa">⛔ غیرفعال</div>')+'</div>'+
-      '<p class="owner">گیمینگ • مالک PUBGメAZVIX</p></div></body></html>';
+      '<p class="owner">آلمان • مالک PUBGメAZVIX</p></div></body></html>';
   }
 
   function buildAllSubPageHtml() {
@@ -328,9 +343,9 @@ textarea{min-height:70px;font-family:monospace;font-size:0.75rem;direction:ltr;t
         '<p>حجم: '+(cfg.gb||0)+' GB</p>'+
         '<pre style="font-size:11px;overflow:auto;max-height:180px;background:#f5f5f5;padding:8px;direction:ltr;text-align:left">'+(cfg.confText||"").replace(/</g,"&lt;")+'</pre></div>';
     }).join("");
-    return '<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="UTF-8"/><title>ساب | پنل ۵۰۰ گیگ</title></head>'+
+    return '<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="UTF-8"/><title>ساب | سرور آلمان</title></head>'+
       '<body style="font-family:Tahoma;background:#f0f2f5;padding:16px;max-width:480px;margin:0 auto">'+
-      '<h2>🎮 ساب همه کانفیگ‌های فعال (پنل ۵۰۰ گیگ)</h2><p style="color:#0d9488;font-weight:700">مالک PUBGメAZVIX</p>'+cards+'</body></html>';
+      '<h2>🇩🇪 ساب همه کانفیگ‌های فعال</h2><p style="color:#0d9488;font-weight:700">مالک PUBGメAZVIX</p>'+cards+'</body></html>';
   }
 
   async function uploadHtml(bodyHtml) {
@@ -390,21 +405,30 @@ textarea{min-height:70px;font-family:monospace;font-size:0.75rem;direction:ltr;t
   }
 
   function createConfig() {
+    if (Number(CONSUMED) >= PANEL.totalGB) {
+      toast("⛔ حجم کل پنل (100 گیگ) تمام شده است!");
+      return;
+    }
     var days = parseInt(document.getElementById("cfgDays").value,10)||30;
-    var gb = parseInt(document.getElementById("cfgGB").value,10)||50;
+    var gb = parseInt(document.getElementById("cfgGB").value,10)||100;
+    var remPanel = PANEL.totalGB - Number(CONSUMED);
+    if (gb > remPanel) {
+      gb = remPanel;
+      toast("⚠ حجم درخواستی به سقف باقی‌مانده پنل محدود شد (" + gb + " گیگ)");
+    }
     var name = (document.getElementById("cfgName").value||"").trim();
-    if (!name) name = "پابجی_500گیگ";
+    if (!name) name = "Ahmad_100GB";
     var built = buildConf(name, days, gb);
     CONFIGS.unshift({
       id: "cfg_"+Date.now().toString(36), name:name, days:days, gb:gb, usedGB:0,
       confText: built.conf, createdAt: new Date().toISOString(), expiresAt: new Date(Date.now()+days*86400000).toISOString(), inSub: true, httpsSubUrl: null
     });
-    CONSUMED = (Number(CONSUMED)||0) + gb;
+    CONSUMED = Number(CONSUMED) + gb;
     LAST_SUB_URL = "";
     save();
     renderList(); renderDash(); renderSub();
     downloadText(built.conf, name.replace(/\s+/g,"_") + ".conf");
-    toast("✅ کانفیگ ۵۰۰ گیگ ساخته و دانلود شد");
+    toast("✅ کانفیگ 100 گیگ ساخته و دانلود شد");
     document.getElementById("cfgName").value = "";
     switchTab("configs");
   }
@@ -427,9 +451,10 @@ textarea{min-height:70px;font-family:monospace;font-size:0.75rem;direction:ltr;t
       save(); renderAll();
       toast(cfg.inSub!==false?"✅ فعال":"⏸ غیرفعال");
     } else if (a === "del") {
-      if (!confirm("حذف شود؟")) return;
+      if (!confirm("حذف شود؟ (توجه: حجم آزادشده به پنل برمی‌گردد)")) return;
+      CONSUMED = Math.max(0, Number(CONSUMED) - (Number(cfg.gb)||0));
       CONFIGS.splice(i,1); LAST_SUB_URL = "";
-      save(); renderAll(); toast("🗑️ حذف شد");
+      save(); renderAll(); toast("🗑️ حذف شد و حجم برگشت");
     } else if (a === "sub") {
       createSubFor(i);
     }
